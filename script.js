@@ -52,6 +52,24 @@ bouton.addEventListener('click', f3, true);
 
 // fonctionnalité 4
 
+var bouton2 = document.getElementsByClassName("btn btn-sm btn-outline-secondary")[1]
+var secondcard = document.getElementsByClassName("card-body")[1].childNodes[1]
+console.log(bouton2)
+console.log(secondcard)
+
+bouton2.addEventListener('click', f4, true);
+
+  function f4(){
+
+    if (secondcard.style.color === 'green') {
+      secondcard.style.color = '';
+      console.log("if");
+    }
+    else {
+      secondcard.style.color = 'green';
+      console.log("else");
+    }
+    }
 
 
 // fonctionnalité 5 
