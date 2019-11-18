@@ -100,37 +100,56 @@ let compteur3=0;
 // celle-ci va se réduire. Cela veut dire que le texte disparaît, l'image n'apparaîtra qu'à 20 % de sa taille d'origine et les boutons "Edit" / "View" restent visibles. 
 // Cette fonction sera réversible : s'il repasse sa souris, la card redevient normale !
 
+function vbutton()
+{var viewbutton = document.getElementsByClassName("btn btn-sm btn-success");
+return viewbutton}
 
-var viewbutton = document.getElementsByClassName("btn btn-sm btn-success");
-console.log(viewbutton);
+function cimage()
+{var cardimage = document.getElementsByClassName("card-img-top");
+return cardimage}
 
+function ctext()
+{var cardtext = document.getElementsByClassName("card-text");
+return cardtext}
 
-var cardimage = document.getElementsByClassName("card-img-top");
-console.log(cardimage);
+for(let index=0, max= 6; index < max; index++){
+  vbutton()[index].addEventListener('mouseover', function(){
 
-var cardtext = document.getElementsByClassName("card-text");
-
-
-for(var index in viewbutton){
-  viewbutton[index].addEventListener('mouseover', function(){
-
-    if (cardimage[index].style.width == "") {
-      cardtext[index].classList.toggle("collapse");
-      cardimage[index].style.width = 20 +"%";
+    
+    if (cimage()[index].style.width == "") {
+      ctext()[index].classList.toggle("collapse");
+      cimage()[index].style.width = "20%";
       console.log("if");
-      console.log(cardtext[index].className);
+      console.log(ctext()[index].className);
+      console.log(index);
     }
-    else if (cardimage[index].style.width == 20 + "%") {
-      cardtext[index].classList.toggle("collapse");
-      cardimage[index].style.width = 100+"%";
-      console.log("else if");
-      console.log(cardtext[index].className);
-    }
-    else {
-      cardimage[index].style.width = 100 +"%";
+    else  {
+      ctext()[index].classList.toggle("collapse");
+      cimage()[index].style.width = "";
       console.log("else");
-      console.log(cardtext[index].className);
+      console.log(ctext()[index].className);
+      console.log(index);
     }
+    }); 
+  }
 
-  } );
-}
+  // fonctionnalité 7 
+
+  let greybutton = document.getElementsByClassName("btn btn-secondary my-2");
+  console.log(greybutton);
+
+  let rowparent = document.getElementsByClassName("row")[1];
+  console.log(rowparent);
+
+  greybutton[0].addEventListener('click',f7,true);
+  
+  function f7(){
+    console.log("hola");
+  rowparent.insertBefore(rowparent.lastChild, rowparent.firstChild);
+  }
+  
+
+
+
+  
+  // fonctionnalité 8
