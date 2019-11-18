@@ -147,9 +147,23 @@ for(let index=0, max= 6; index < max; index++){
     console.log("hola");
   rowparent.insertBefore(rowparent.lastChild, rowparent.firstChild);
   }
-  
-
-
-
-  
+    
   // fonctionnalité 8
+
+  var greybutton2 = document.getElementsByClassName("btn btn-primary my-2")[0];
+  console.log(greybutton2);
+
+  let rowparent2 = document.getElementsByClassName("row")[1];
+  console.log(rowparent2);
+  let query = document.getElementsByTagName("a.btn.btn-primary.my-2");
+  console.log(query)
+
+  greybutton2.addEventListener("click", function(event) {
+    event.preventDefault()});
+  
+  greybutton2.addEventListener('click',f8,true)
+  function f8(){
+    console.log("hola");
+  rowparent2.insertBefore(rowparent2.firstChild, rowparent.lastChild);
+  }
+  
