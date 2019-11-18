@@ -73,3 +73,25 @@ bouton2.addEventListener('click', f4, true);
 
 
 // fonctionnalité 5 
+var navbar2 = document.getElementsByTagName("header")[0]
+var bootstrap = document.getElementsByTagName("link")[0]
+
+console.log(bootstrap)
+console.log(navbar2)
+
+navbar2.addEventListener('dblclick', f5, true);
+let compteur3=0;
+  function f5(){
+    console.log(compteur3);
+    compteur3 ++;
+
+    if (bootstrap.getAttribute("href") === "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css") {
+      bootstrap.setAttribute("href","");
+      console.log("if");
+    }
+    else {
+      bootstrap.setAttribute("href","https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+      console.log("else");
+    }
+    }
+    
