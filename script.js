@@ -38,6 +38,17 @@ buttonnavbar[0].addEventListener('click', f2, true);
 
 // fonctionnalité 3
 
+var bouton = document.getElementsByClassName("btn btn-sm btn-outline-secondary")[0]
+var first_card = document.getElementsByClassName("card-body")[0].childNodes[1]
+console.log(bouton)
+console.log(first_card)
+
+bouton.addEventListener('click', f3, true);
+
+  function f3(){
+    first_card.style.color = "red"
+
+  }
 
 // fonctionnalité 4
 
