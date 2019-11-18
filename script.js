@@ -94,4 +94,43 @@ let compteur3=0;
       console.log("else");
     }
     }
-    
+
+// fonctionnalité 6
+// La fonctionnalité sera la suivante : si un utilisateur passe sa souris sur le bouton "View" d'une card (n'importe laquelle), 
+// celle-ci va se réduire. Cela veut dire que le texte disparaît, l'image n'apparaîtra qu'à 20 % de sa taille d'origine et les boutons "Edit" / "View" restent visibles. 
+// Cette fonction sera réversible : s'il repasse sa souris, la card redevient normale !
+
+
+var viewbutton = document.getElementsByClassName("btn btn-sm btn-success");
+console.log(viewbutton);
+
+
+var cardimage = document.getElementsByClassName("card-img-top");
+console.log(cardimage);
+
+var cardtext = document.getElementsByClassName("card-text");
+
+
+for(var index in viewbutton){
+  viewbutton[index].addEventListener('mouseover', function(){
+
+    if (cardimage[index].style.width == "") {
+      cardtext[index].classList.toggle("collapse");
+      cardimage[index].style.width = 20 +"%";
+      console.log("if");
+      console.log(cardtext[index].className);
+    }
+    else if (cardimage[index].style.width == 20 + "%") {
+      cardtext[index].classList.toggle("collapse");
+      cardimage[index].style.width = 100+"%";
+      console.log("else if");
+      console.log(cardtext[index].className);
+    }
+    else {
+      cardimage[index].style.width = 100 +"%";
+      console.log("else");
+      console.log(cardtext[index].className);
+    }
+
+  } );
+}
