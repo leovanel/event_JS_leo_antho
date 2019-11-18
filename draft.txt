@@ -1,0 +1,10 @@
+    if (navbar.className = ("collapse bg-dark")) {
+      navbar.classList.toggle("bg-dark");
+      console.log(navbar.className)
+    }
+    else {
+      navbar.classList.toggle("collapse bg-dark");
+      console.log(navbar.className)
+    }
+
+     if (navbar.className === ('bg-dark')) 
